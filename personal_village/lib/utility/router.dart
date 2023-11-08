@@ -6,6 +6,8 @@ import 'package:personal_village/login/view/forgot_password.dart';
 import 'package:personal_village/screens/fallback_screen.dart';
 import 'package:personal_village/splash/splash.dart';
 import 'package:personal_village/values/routes.dart';
+import 'package:personal_village/login/view/profilepage.dart';
+
 
 
 Route generateRoute(RouteSettings settings) {
@@ -23,7 +25,11 @@ Route generateRoute(RouteSettings settings) {
     case  ChatScreen:
       return MaterialPageRoute(builder: (context) => ChatScreen(recipientName: 'John') );
 
+    case  chatlistRoute:
+      return MaterialPageRoute(builder: (context) => ChatScreen(recipientName: 'john') );
 
+      case ProfileRoute:
+      return MaterialPageRoute(builder: (context) =>  ProfileScreen());
 
     default:
       return MaterialPageRoute(builder: (context) => FallbackScreen());
